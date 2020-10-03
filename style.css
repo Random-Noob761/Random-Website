@@ -1,0 +1,81 @@
+.heading1 {
+  text-align: center;
+  font-style: italic;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.spacing {
+  visibility: hidden;
+}
+
+
+#likes {
+  text-align: left;
+  font-size: 1.25em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#dislikes {
+  float: right;
+  font-size: 1.25em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+button:hover {
+  color:green;
+}
+
+button {
+  padding:0 20px;
+  margin-top: 10px;
+  line-height: 30px;
+  font-weight: bold;
+  background: lightgreen;
+  border: none;
+  border-radius: 10px;
+}
+
+#hc {
+  color: black;
+}
+
+.main-container {
+  float: left;
+  position: relative;
+  left: 50%;
+}
+    
+.fixer-container {
+  float: left;
+  position: relative;
+  left: -50%;
+}
+
+#buttonShow {
+  visibility: hidden;
+
+}
