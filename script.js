@@ -47,6 +47,13 @@ function changeText1() {
   document.getElementById("colorMode").innerHTML = "Light Theme"
 }
 
+function nextImage() {
+
+}
+
+function previousImage() {
+  
+}
 
 var i = 0;
 

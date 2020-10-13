@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Random Website</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body id = "x" style="background-color: rgb(255, 165, 0);">
-    <script src="script.js"></script>
 
-    <h1 class = "heading1">Random Website</h1>
-    
-    <h3 class = "text"><b class = "spacing">a</b> As the title suggest, this is a random website and you porbably are here by chance.</h3>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Random Website</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="x" style="background-color: rgb(255, 165, 0);">
+	<script src="script.js">
+
+	</script>
+
+	<h1 class="heading1">Random Website</h1>
+
+	<h3 class="text"><b class = "spacing">a</b> As the title suggest, this is a random website and you porbably are here by chance.</h3>
 
     <p>Also as what can you refer me to, I guess just a random person on the internet...
     </p>
@@ -69,10 +73,28 @@
       <li>Btd5</li>
       <li>Plant vs Zombies</li>
     </ol>
-    
-    <p class = "center"><img src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fiomega-europe.com%2Fwp-content%2Fuploads%2F2019%2F03%2Famong-us.png&f=1&nofb=1" height = "60%" width = "60%"></p>
 
-    <p class = "center">Some pictures of those games</p>
+    <!--next/previous image buttons-->
+
+    <p class ="left">
+      <!--previous image button-->
+      <button id = "buttonPrevious"  type = "button"
+      onclick = "previousImage()">
+      <strong>  ← </strong>
+      </button>
+
+     <!--next image button-->
+      <span class = "float-right">
+        <button id = "buttonNext" type = "button" 
+        onclick= "nextImage()">
+        <strong>  → </strong>
+        </button>
+      </span>
+    </p>
+
+    <!--images of favourite games-->
+    
+    <p class = "center"><img src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fiomega-europe.com%2Fwp-content%2Fuploads%2F2019%2F03%2Famong-us.png&f=1&nofb=1" height = "60%" width = "60%" id = "fav-game-pics"></p>
     
     </div>
 
@@ -128,7 +150,7 @@
       <!--<button type = "button" onclick = "test()">
         test button  
       </button>
-    
+      -->
       
   </body>
 </html>
