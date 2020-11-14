@@ -15,12 +15,19 @@
 
 	<h1 class="heading1">Random Website</h1>
 
-	<h3 class="text"><b class = "spacing">a</b> As the title suggest, this is a random website and you porbably are here by chance.</h3>
+	<h3 style = "font-size:1em; font-weight:100;">
+    <b class = "spacing">a</b> 
+    As the title suggest, this is a random website and you porbably are here by chance.
+  </h3>
 
-    <p>Also as what can you refer me to, I guess just a random person on the internet...
+    <p><span class = "spacing">a</span> 
+    As what can you refer me to, I guess just a random person on the internet...
     </p>
 
-    <h3 class = "text"><b class = "spacing">a</b> Well since you are here, I guess I could tell you a few things about myself. Let just start by telling some of my likes and dislikes first.</h3>
+    <h3 style = "font-size:1em; font-weight:100;">
+      <b class = "spacing">a</b> 
+      Well since you are here, I guess I could tell you a few things about myself. Let just start by telling some of my likes and dislikes first.
+    </h3>
 
     <!--Likes & Dislikes-->
     <div id = "hc">
@@ -73,29 +80,30 @@
       <li>Plant vs Zombies</li>
     </ol>
 
-    <!--next/previous image buttons-->
-
-    <p class ="left">
+    <!--favourite game pictures-->
+    
+    <div id = "container" class = "center">
       <!--previous image button-->
-      <button id = "buttonPrevious"  type = "button"
-      onclick = "previousImage()">
-      <strong>  ← </strong>
-      </button>
-
-     <!--next image button-->
-      <span class = "float-right">
-        <button id = "buttonNext" type = "button" 
-        onclick= "nextImage()">
-        <strong>  → </strong>
+      <div id = "previous-button">
+        <button type = "button" onclick="">
+           Previous
         </button>
-      </span>
-    </p>
+      </div>
 
-    <!--images of favourite games-->
-    
-    <p class = "center"><img src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fiomega-europe.com%2Fwp-content%2Fuploads%2F2019%2F03%2Famong-us.png&f=1&nofb=1" height = "60%" width = "60%" id = "fav-game-pics"></p>
-    
+      <!--fav-game-pics-->
+      <div id = "game-pics">
+        <img src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fiomega-europe.com%2Fwp-content%2Fuploads%2F2019%2F03%2Famong-us.png&f=1&nofb=1" height= "150px" width= "300px" id = "fav-game-pics">
+      </div>
+
+      <!--next image button-->
+      <div id = "next-button">
+        <button type = "button" onclick = "">
+          Next
+        </button>
+      </div>
     </div>
+    </div>
+    <!--end of favourite game pics-->
 
 
     <!--Buttons-->
