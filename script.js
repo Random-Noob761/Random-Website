@@ -47,12 +47,46 @@ function changeText1() {
   document.getElementById("colorMode").innerHTML = "Light Theme"
 }
 
-function nextImage() {
-
-}
+var picNo = 0;
 
 function previousImage() {
-  
+  if(picNo >=1) {
+    picNo--;
+    if(picNo == 1) {
+      document.getElementById("fav-game-pics").src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F8MXQlwEkaqA%2Fmaxresdefault.jpg&f=1&nofb=1";
+      console.log(picNo);
+    }
+
+    if(picNo == 0) {
+      document.getElementById("fav-game-pics").src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fiomega-europe.com%2Fwp-content%2Fuploads%2F2019%2F03%2Famong-us.png&f=1&nofb=1";
+      console.log(picNo);
+    }
+  }
+  else {
+    picNo = 2;
+        document.getElementById("fav-game-pics").src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.apkmody.io%2Fuploads%2F2018%2F07%2FBloons-TD-6.jpg&f=1&nofb=1";
+    console.log(picNo);
+  }
+}
+
+function nextImage() {
+    if(picNo <=1) {
+    picNo++;
+    if(picNo == 1) {
+      document.getElementById("fav-game-pics").src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.apkmody.io%2Fuploads%2F2018%2F07%2FBloons-TD-6.jpg&f=1&nofb=1";
+      console.log(picNo);
+    }
+
+    if(picNo == 2) {
+      document.getElementById("fav-game-pics").src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F8MXQlwEkaqA%2Fmaxresdefault.jpg&f=1&nofb=1";
+      console.log(picNo);
+    }
+  }
+  else {
+    picNo = 0;
+        document.getElementById("fav-game-pics").src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fiomega-europe.com%2Fwp-content%2Fuploads%2F2019%2F03%2Famong-us.png&f=1&nofb=1";
+    console.log(picNo);
+  }
 }
 
 var i = 0;
