@@ -89,15 +89,4 @@ function nextImage() {
   }
 }
 
-var i = 0;
 
-function test() {
-   if(i<=3) {
-     i++;
-     console.log(i);
-   } 
-   else {
-     i=0;
-     console.log(i);
-   }
-}
