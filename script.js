@@ -1,3 +1,17 @@
+var screenWidth = window.screen.availWidth;
+var screenHeight = window.screen.availHeight;
+
+window.onload = function() {
+  var introduction = document.getElementById ("introduction");
+  introduction.style.width = screenWidth * 5/8 + "px";
+  introduction.style.marginTop = screenHeight * 25/960 + "px";
+  introduction.style.marginBottom = screenHeight * 75/960 + "px";
+
+  var info1 = document.getElementById("likesDislikes");
+  info1.style.marginLeft = screenWidth * 1/6 + "px";
+  info1.style.marginRight = screenWidth * 1/6 + "px";
+}
+
 function show() {
   var a = document.getElementById ("hc")
   a.style.display = "block"
@@ -88,5 +102,6 @@ function nextImage() {
     console.log(picNo);
   }
 }
+
 
 
