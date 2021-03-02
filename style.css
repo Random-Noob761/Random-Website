@@ -7,14 +7,14 @@
 
 #likes {
   text-align: left;
-  font-size: 1.25em;
+  font-size: 2em;
   font-style: italic;
   font-weight: bold;
 }
 
 #dislikes {
   float: right;
-  font-size: 1.25em;
+  font-size: 1em;
   font-style: italic;
   font-weight: bold;
 }
@@ -60,25 +60,11 @@ button {
   color: black;
 }
 
-.main-container {
-  float: left;
-  position: relative;
-  left: 50%;
-}
-    
-.fixer-container {
-  float: left;
-  position: relative;
-  left: -50%;
-}
-
 #buttonShow {
   visibility: hidden;
 }
 
 #container {
-  height: 200px;
-  width: 575px;
   position: relative;
 }
 

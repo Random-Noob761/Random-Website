@@ -10,6 +10,15 @@ window.onload = function() {
   var info1 = document.getElementById("likesDislikes");
   info1.style.marginLeft = screenWidth * 1/6 + "px";
   info1.style.marginRight = screenWidth * 1/6 + "px";
+  info1.style.marginBottom = screenHeight * 50/960 + "px";
+
+  var gameImages = document.getElementById("fav-game-pics")
+  gameImages.style.width = screenWidth * 1/3 + "px"
+  gameImages.style.height = screenWidth * 1/6 + "px"
+
+  var container = document.getElementById("container")
+  container.style.width = screenWidth * 2/3 + "px"
+  container.style.height = screenHeight * 1/3 + "px"
 }
 
 function show() {
