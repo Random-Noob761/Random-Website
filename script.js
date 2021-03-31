@@ -93,7 +93,7 @@ function previousImage() {
 }
 
 function nextImage() {
-    if(picNo <=1) {
+  if(picNo <=1) {
     picNo++;
     if(picNo == 1) {
       document.getElementById("fav-game-pics").src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.apkmody.io%2Fuploads%2F2018%2F07%2FBloons-TD-6.jpg&f=1&nofb=1";
