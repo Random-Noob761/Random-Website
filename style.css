@@ -97,3 +97,18 @@ button {
   margin-left: auto;
   font-size: 1.1em;
 }
+
+a {
+  --color:lightblue;
+  --hoverColor: red;
+  --visitedColor: blue; 
+  color: var(--color);
+}
+
+a:hover {
+  color: var(--hoverColor);
+}
+
+a:visited {
+  color: var(--visitedColor);
+}
