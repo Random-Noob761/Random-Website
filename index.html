@@ -6,13 +6,181 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Random Website</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      min-width: 1000px;
+    }
+
+    #main-heading {
+      text-align: center;
+      font-style: italic;
+      font-size: 4.5em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    #likes {
+      text-align: left;
+      font-size: 2em;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    #dislikes {
+      float: right;
+      font-size: 1em;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .float-right {
+      float: right;
+    }
+
+    .float-left {
+      float: left;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    table.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button:hover {
+      color: var(--hoverColor);
+      opacity: 1;
+    }
+
+    button {
+      --background: lightgreen;
+      --font-color: rgb(0,0,0);
+      --hoverColor: green;
+      padding:0 20px;
+      margin-top: 10px;
+      line-height: 30px;
+      font-weight: bold;
+      color: var(--font-color);
+      background: var(--background);
+      border: none;
+      border-radius: 10px;
+      opacity: 0.75;
+    }
+
+    #hc {
+      color: black;
+    }
+
+    #buttonShow {
+      visibility: hidden;
+    }
+
+    #container {
+      position: relative;
+    }
+
+    #previous-button {
+      position: absolute;
+      bottom: 100px;
+      left: 0px;
+    }
+
+    #next-button {
+      position: absolute;
+      bottom: 100px;
+      right: 0px;
+    }
+
+    *game-pics {
+      position: absolute;
+      bottom: 50px;
+      right:150px;
+    }
+
+    #introduction {
+      height: 75px;
+      position: initial;
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 1.1em;
+    }
+
+    a {
+      --color:lightblue;
+      --hoverColor: red;
+      --visitedColor: blue; 
+      color: var(--color);
+    }
+
+    a:hover {
+      color: var(--hoverColor);
+    }
+
+    a:visited {
+      color: var(--visitedColor);
+    }
+
+    nav {
+      width: 100%;
+      height: 100px;
+      background-color: orangered;
+      border-radius: 10px;
+    }
+
+    nav ul li {
+      list-style: none;
+      display: inline-block;
+      float: left;
+      line-height: 100px;
+    }
+
+    nav ul li a {
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      font-family: MS Trebuchet;
+      padding: 0 50px;
+    }
+
+    nav ul li a:hover {
+      color: purple;
+    }
+
+    #navigation {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0px;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
 </head>
 
 <body id="x" style="background-color: rgb(255, 165, 0);">
 
   <!--main heading-->
-	<h1 class="heading1">𝕽𝖆𝖓𝖉𝖔𝖒 𝖂𝖊𝖇𝖘𝖎𝖙𝖊</h1>
-
+	<h1 id="main-heading">𝕽𝖆𝖓𝖉𝖔𝖒 𝖂𝖊𝖇𝖘𝖎𝖙𝖊</h1>
+  
+  <div id = "navigation">
+  <nav>
+    <ul>
+      <li><a href = "#main-heading">Top</a></li>
+      <li><a href = "#introduction">Test 1</a></li>
+      <li><a href = "#likesDislikes">Test 2</a></li>
+      <li><a href = "#container">Test 3</a></li>
+    </ul>
+  </nav>
+  </div>
 
   <!--The introduction for this website-->
   <div id = "introduction" style = "margin-bottom: 75px; margin-top: 25px;">
@@ -116,8 +284,8 @@
       </div>
 
       <!--fav-game-pics-->
-      <div id = "game-pics" class = "center">
-        <img src = "https://wallpapercave.com/wp/BpfSrOJ.jpg" id = "fav-game-pics">
+      <div id = "game-pics" class = "center" style = "z-index:-1;">
+        <img src = "https://wallpapercave.com/wp/BpfSrOJ.jpg" id = "fav-game-pics" style = "z-index:-1;">
       </div>
 
       <!--next image button-->
@@ -129,14 +297,6 @@
 
       <!--end of favourite game pics-->
     </div>
-
-    <!--man running around-->
-    <marquee scrollamount = "15"
-      direction ="right"
-      behaviour = "sroll">
-      <img src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2F0q0ur6668di51.gif&f=1&nofb=1" height = "100px">
-    </marquee>
-
     </div>
 
     <!--Buttons-->
@@ -279,27 +439,6 @@
         document.getElementById("colorMode").setAttribute( "onClick","javascript: changeText1();")
 
         var x = document.getElementById ("x")
-        x.style.background = "orange";
-        x.style.color = "black"
-
-        var x1 = document.getElementById ("hc")
-        x1.style.color = "black"
-
-        var links = document.getElementsByTagName("a")
-        for (i=0; i<links.length; i++){
-          links[i].style.setProperty('--color', 'lightblue');
-          links[i].style.setProperty('--hoverColor', 'red');
-          links[i].style.setProperty('--visitedColor','blue');
-        }
-
-        document.getElementById("colorMode").innerHTML = "Dark Theme"
-
-      }
-
-      function changeText1() {
-        document.getElementById("colorMode").setAttribute ("onClick", "javascript: changeText();")
-
-        var x = document.getElementById ("x")
         x.style.background = "rgb(24,24,24)";
         x.style.color = "rgb(200,200,200)"
 
@@ -312,6 +451,42 @@
           links[i].style.setProperty('--visitedColor','grey');
           links[i].style.setProperty('--hoverColor', 'yellow');
         }
+
+        var buttons = document.getElementsByTagName("button")
+        for (i=0; i<buttons.length; i++) {
+          buttons[i].style.setProperty('--background', 'rgb(51, 102, 153)');
+          buttons[i].style.setProperty('--font-color', 'rgb(150,150,150)');
+          buttons[i].style.setProperty('--hoverColor', 'rgb(75,75,75)');
+        }
+
+        document.getElementById("colorMode").innerHTML = "Dark Theme"
+      }
+
+      function changeText1() {
+        document.getElementById("colorMode").setAttribute ("onClick", "javascript: changeText();")
+
+        var x = document.getElementById ("x")
+        x.style.background = "orange";
+        x.style.color = "black"
+
+        var x1 = document.getElementById ("hc")
+        x1.style.color = "black"
+
+        var links = document.getElementsByTagName("a")
+        for (i=0; i<links.length; i++){
+          links[i].style.setProperty('--color', 'lightblue');
+          links[i].style.setProperty('--visitedColor','blue');
+          links[i].style.setProperty('--hoverColor', 'red');
+        }
+
+        var buttons = document.getElementsByTagName("button")
+        for (i=0; i<buttons.length; i++) {
+          buttons[i].style.setProperty('--background', 'lightgreen');
+          buttons[i].style.setProperty('--font-color', 'rgb(0,0,0)');
+          buttons[i].style.setProperty('--hoverColor', 'green');
+        }
+
+        document.getElementById("colorMode").innerHTML = "Light Theme"
       }
 
 
