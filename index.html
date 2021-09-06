@@ -6,206 +6,196 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Random Website</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
-  <style>
-    body {
-      min-width: 1000px;
-    }
+	<style>
+		body {
+			min-width: 1000px;
+		}
 
-    :root {
-      --mhbgcolor: orangered;
-    }
+		:root {
+			--mhbgcolor: orangered;
+		}
 
-    #main-heading-text {
-      text-align: center;
-      font-style: italic;
-      font-size: 4.5em;
-      font-weight: bold;
-      width: 100%;
-      height: 100px;
-      background-color: var(--mhbgcolor);
-    }
+		#main-heading-text {
+			text-align: center;
+			font-style: italic;
+			font-size: 4.5em;
+			font-weight: bold;
+			width: 100%;
+			height: 100px;
+			background-color: var(--mhbgcolor);
+		}
 
-    #likes {
-      text-align: left;
-      font-size: 2em;
-      font-style: italic;
-      font-weight: bold;
-    }
+		#likes {
+			text-align: left;
+			font-size: 2em;
+			font-style: italic;
+			font-weight: bold;
+		}
 
-    #dislikes {
-      float: right;
-      font-size: 1em;
-      font-style: italic;
-      font-weight: bold;
-    }
+		#dislikes {
+			float: right;
+			font-size: 1em;
+			font-style: italic;
+			font-weight: bold;
+		}
 
-    .float-right {
-      float: right;
-    }
+		.float-right {
+			float: right;
+		}
 
-    .float-left {
-      float: left;
-    }
+		.float-left {
+			float: left;
+		}
 
-    .right {
-      text-align: right;
-    }
+		.right {
+			text-align: right;
+		}
 
-    .center {
-      text-align: center;
-    }
+		.center {
+			text-align: center;
+		}
 
-    table.center {
-      margin-left: auto;
-      margin-right: auto;
-    }
+		table.center {
+			margin-left: auto;
+			margin-right: auto;
+		}
 
-    button:hover {
-      color: var(--hoverColor);
-      opacity: 1;
-    }
+		button:hover {
+			color: var(--hoverColor);
+			opacity: 1;
+		}
 
-    button {
-      --background: lightgreen;
-      --font-color: rgb(0,0,0);
-      --hoverColor: green;
-      padding:0 20px;
-      margin-top: 10px;
-      line-height: 30px;
-      font-weight: bold;
-      color: var(--font-color);
-      background: var(--background);
-      border: none;
-      border-radius: 10px;
-      opacity: 0.75;
-    }
+		button {
+			--background: lightgreen;
+			--font-color: rgb(0, 0, 0);
+			--hoverColor: green;
+			padding: 0 20px;
+			margin-top: 10px;
+			line-height: 30px;
+			font-weight: bold;
+			color: var(--font-color);
+			background: var(--background);
+			border: none;
+			border-radius: 10px;
+			opacity: 0.75;
+		}
 
-    #hc {
-      color: black;
-    }
+		#hc {
+			color: black;
+		}
 
-    #buttonShow {
-      visibility: hidden;
-    }
+		#buttonShow {
+			visibility: hidden;
+		}
 
-    #container {
-      position: relative;
-    }
+		#container {
+			position: relative;
+		}
 
-    #previous-button {
-      position: absolute;
-      bottom: 100px;
-      left: 0px;
-    }
+		*game-pics {
+			position: absolute;
+			bottom: 50px;
+			right: 150px;
+		}
 
-    #next-button {
-      position: absolute;
-      bottom: 100px;
-      right: 0px;
-    }
+		#introduction {
+			height: 75px;
+			position: initial;
+			margin-right: auto;
+			margin-left: auto;
+			font-size: 1.1em;
+		}
 
-    *game-pics {
-      position: absolute;
-      bottom: 50px;
-      right:150px;
-    }
+		a {
+			--color: lightblue;
+			--hoverColor: red;
+			--visitedColor: blue;
+			color: var(--color);
+		}
 
-    #introduction {
-      height: 75px;
-      position: initial;
-      margin-right: auto;
-      margin-left: auto;
-      font-size: 1.1em;
-    }
+		a:hover {
+			color: var(--hoverColor);
+		}
 
-    a {
-      --color:lightblue;
-      --hoverColor: red;
-      --visitedColor: blue; 
-      color: var(--color);
-    }
+		a:visited {
+			color: var(--visitedColor);
+		}
 
-    a:hover {
-      color: var(--hoverColor);
-    }
+		nav {
+			width: 100%;
+			height: 100px;
+			background-color: var(--mhbgcolor);
+			border-radius: 0px 0px 15px 15px;
+		}
 
-    a:visited {
-      color: var(--visitedColor);
-    }
+		nav ul li {
+			list-style: none;
+			display: inline-block;
+			float: left;
+			line-height: 100px;
+		}
 
-    nav {
-      width: 100%;
-      height: 100px;
-      background-color: var(--mhbgcolor);
-      border-radius: 0px 0px 15px 15px;
-    }
+		nav ul li a {
+			display: block;
+			text-decoration: none;
+			font-size: 20px;
+			font-family: MS Trebuchet;
+			padding: 0 50px;
+		}
 
-    nav ul li {
-      list-style: none;
-      display: inline-block;
-      float: left;
-      line-height: 100px;
-    }
+		nav ul li a:hover {
+			color: purple;
+		}
 
-    nav ul li a {
-      display: block;
-      text-decoration: none;
-      font-size: 20px;
-      font-family: MS Trebuchet;
-      padding: 0 50px;
-    }
+		#navigation {
+			z-index: 1;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+		}
 
-    nav ul li a:hover {
-      color: purple;
-    }
-
-    #navigation {
-      z-index: 1;
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0px;
-    }
-
-    * {
-      margin: 0px;
-      padding: 0px;
-    }
-  </style>
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
 </head>
 
 <body id="x" style="background-color: rgb(255, 165, 0);">
 
-  <!--main heading-->
+	<!--main heading-->
 	<h1 id="main-heading-text">𝕽𝖆𝖓𝖉𝖔𝖒 𝖂𝖊𝖇𝖘𝖎𝖙𝖊</h1>
-  
-  <div id = "navigation">
-  <nav>
-    <ul>
-      <li><a href = "#main-heading">Top</a></li>
-      <li><a href = "#introduction">Test 1</a></li>
-      <li><a href = "#likesDislikes">Test 2</a></li>
-      <li><a href = "#container">Test 3</a></li>
-    </ul>
-  </nav>
-  </div>
 
-  <!--The introduction for this website-->
-  <div id = "introduction" style = "margin-bottom: 75px; margin-top: 25px;">
-	<h3 class = "center">
-    As the title suggest, this is a random website and you porbably are here by chance. As what can you refer me to, I guess just a random person on the internet...
-  </h3>
+	<div id="navigation">
+		<nav>
+			<ul>
+				<li><a href="#main-heading">Top</a></li>
+				<li><a href="#introduction">Test 1</a></li>
+				<li><a href="#likesDislikes">Test 2</a></li>
+				<li><a href="#container">Test 3</a></li>
+			</ul>
+		</nav>
+	</div>
 
-  <h3 class = "center">
-      Well since you are here, I guess I could tell you a few things about myself. Let just start by telling some of my likes and dislikes first.
-  </h3>
-  </div>
+	<!--The introduction for this website-->
+	<div id="introduction" style="margin-bottom: 75px; margin-top: 25px;">
+		<h3 class="center">
+			As the title suggest, this is a random website and you porbably are here by chance. As what can you refer me to, I guess
+			just a random person on the internet...
+		</h3>
 
-  <!--Likes & Dislikes-->
-  <div id = "hc">
-  <div id = "likesDislikes">
-  <p id = "likes">
-    What I Like
-  <span id = "dislikes">
+		<h3 class="center">
+			Well since you are here, I guess I could tell you a few things about myself. Let just start by telling some of my likes and
+			dislikes first.
+		</h3>
+	</div>
+
+	<!--Likes & Dislikes-->
+	<div id="hc">
+		<div id="likesDislikes">
+			<p id="likes">
+				What I Like
+				<span id = "dislikes">
     What I Dislike
   </span>
   </p>
@@ -273,35 +263,25 @@
 
     <!--Favourite games-->
     <p class = "center">Here is a list of my favourite videogames(not in a specific order).</p>
-    <ol class = "center" style = "margin-bottom: 50px;">
+    <ul class = "center" style = "margin-bottom: 50px;">
       <li>Soul Knight</li>
       <li>Btd5</li>
       <li>Btd6</li>
       <li>Plant vs Zombies</li>
-    </ol>
+    </ul>
 
     <!--favourite game pictures-->
     
+    <map name = "favouritegames">
+      <area shape = "rect" coords = "0,0,400,300" alt = "left" onclick = "previousImage()" id = "preimg">
+      <area shape = "rect" coords = "401,0,800,300" alt = "right" onclick = "nextImage()" id = "neximg">
+    </map>
+
     <div id = "container" style = "margin-right: auto; margin-left: auto;">
-      <!--previous image button-->
-      <div id = "previous-button">
-        <button type = "button" onclick="previousImage()">
-           Previous
-        </button>
-      </div>
-
       <!--fav-game-pics-->
-      <div id = "game-pics" class = "center" style = "z-index:-1;">
-        <img src = "https://wallpapercave.com/wp/BpfSrOJ.jpg" id = "fav-game-pics" style = "z-index:-1;">
+      <div id = "game-pics" class = "center">
+        <img src = "https://wallpapercave.com/wp/BpfSrOJ.jpg" id = "fav-game-pics" usemap="#favouritegames">
       </div>
-
-      <!--next image button-->
-      <div id = "next-button">
-        <button type = "button" onclick = "nextImage()">
-          Next
-        </button>
-      </div>
-
       <!--end of favourite game pics-->
     </div>
     </div>
@@ -396,7 +376,9 @@
       </button>
       
   <!--Start of javascript-->
-    <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular/12.2.4/core.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
       var screenWidth = window.screen.availWidth;
       var screenHeight = window.screen.availHeight;
 
@@ -411,13 +393,19 @@
         info1.style.marginRight = screenWidth * 1/6 + "px";
         info1.style.marginBottom = screenHeight * 50/960 + "px";
 
-        var gameImages = document.getElementById("fav-game-pics")
-        gameImages.style.width = screenWidth * 1/3 + "px"
-        gameImages.style.height = screenWidth * 1/6 + "px"
+        var gameImages = document.getElementById("fav-game-pics");
+        gameImages.style.height = screenWidth * 1/4 + "px";
 
-        var container = document.getElementById("container")
-        container.style.width = screenWidth * 2/3 + "px"
-        container.style.height = screenHeight * 1/3 + "px"
+        var fgpw = gameImages.clientWidth;
+        var fgph = gameImages.cleintHeight;
+        var neximg = document.getElementById("neximg");
+        var preimg = document.getElementById("preimg");
+        preimg.style.coords = "0,0," + fgpw * 4/9 + "," + fgph;
+        neximg.style.coords = fgpw * 5/9 + ", 0," + fgpw + "," + fgph; 
+
+        var container = document.getElementById("container");
+        container.style.width = screenWidth * 2/3 + "px";
+        container.style.height = screenHeight * 2/5 + "px";
       }
 
       function show() {
@@ -508,7 +496,8 @@
       var gamePics = [
         "https://wallpapercave.com/wp/BpfSrOJ.jpg",
         "https://wallpapercave.com/wp/wp7501215.jpg",
-        "https://wallpapercave.com/wp/wp6803685.jpg"
+        "https://wallpapercave.com/wp/wp6803685.jpg",
+        "https://wallpapercave.com/wp/wp5248808.jpg"
       ];
 
       var currentNo = 0;
@@ -524,7 +513,6 @@
         document.getElementById("fav-game-pics").setAttribute("src", gamePics[(currentNo - 1) % gamePics.length]);
         }
       }
-
 
       function nextImage() {
         function findNo(picNo) {
